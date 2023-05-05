@@ -73,7 +73,7 @@ uploadArchives {
     }
 }
 
-uploadArchives.dependsOn(setVersion)
+//uploadArchives.dependsOn(setVersion)
 
 signing {
     required { !isSnapshot && gradle.taskGraph.hasTask("uploadArchives") }
