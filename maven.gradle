@@ -34,6 +34,8 @@ task setVersion {
 //    repositories.mavenDeployer {
 //        beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 //
+//        repository(url: mavenLocal().getUrl())
+
 //        repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
 //            authentication(userName: ossrhUsername, password: ossrhPassword)
 //        }
@@ -41,7 +43,7 @@ task setVersion {
 //        snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
 //            authentication(userName: ossrhUsername, password: ossrhPassword)
 //        }
-//
+
 //        pom.project {
 //            name project.ext.name
 //            artifactId project.ext.artifactId
@@ -72,7 +74,7 @@ task setVersion {
 //        }
 //    }
 //}
-
+//
 //uploadArchives.dependsOn(setVersion)
 
 //signing {
