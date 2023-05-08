@@ -78,10 +78,10 @@ task setVersion {
 //
 //uploadArchives.dependsOn(setVersion)
 
-//signing {
-//    required { !isSnapshot && gradle.taskGraph.hasTask("uploadArchives") }
-//    sign configurations.archives
-//}
+signing {
+    required { !isSnapshot && gradle.taskGraph.hasTask("uploadArchives") }
+    sign configurations.archives
+}
 
 task androidJavadocs(type: Javadoc) {
     source = android.sourceSets.main.java.srcDirs
